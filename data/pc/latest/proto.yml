@@ -2847,11 +2847,14 @@
       _: mode ?
          if add or change:
             name: anonymousNbt
-            flags: ["bitflags", { 
-               "type": "u8", 
-               "flags": ["friendly_fire", "see_friendly_invisible"] 
-            }]
+            prefix: anonymousNbt
+            suffix: anonymousNbt
             nameTagVisibility: varint =>
+               - always
+               - never
+               - hide_for_other_teams
+               - hide_for_own_team
+            deathMessageVisibility: varint =>
                - always
                - never
                - hide_for_other_teams
@@ -2862,8 +2865,10 @@
                - push_other_teams
                - push_own_team
             formatting: varint
-            prefix: anonymousNbt
-            suffix: anonymousNbt
+            flags: ["bitflags", {
+               "type": "u8",
+               "flags": ["friendly_fire", "see_friendly_invisible"]
+            }]
          default: void
       players: mode ?
          if add or join or leave: string[]varint

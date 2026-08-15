@@ -9030,20 +9030,30 @@
                           "type": "anonymousNbt"
                         },
                         {
-                          "name": "flags",
+                          "name": "prefix",
+                          "type": "anonymousNbt"
+                        },
+                        {
+                          "name": "suffix",
+                          "type": "anonymousNbt"
+                        },
+                        {
+                          "name": "nameTagVisibility",
                           "type": [
-                            "bitflags",
+                            "mapper",
                             {
-                              "type": "u8",
-                              "flags": [
-                                "friendly_fire",
-                                "see_friendly_invisible"
-                              ]
+                              "type": "varint",
+                              "mappings": {
+                                "0": "always",
+                                "1": "never",
+                                "2": "hide_for_other_teams",
+                                "3": "hide_for_own_team"
+                              }
                             }
                           ]
                         },
                         {
-                          "name": "nameTagVisibility",
+                          "name": "deathMessageVisibility",
                           "type": [
                             "mapper",
                             {
@@ -9077,12 +9087,17 @@
                           "type": "varint"
                         },
                         {
-                          "name": "prefix",
-                          "type": "anonymousNbt"
-                        },
-                        {
-                          "name": "suffix",
-                          "type": "anonymousNbt"
+                          "name": "flags",
+                          "type": [
+                            "bitflags",
+                            {
+                              "type": "u8",
+                              "flags": [
+                                "friendly_fire",
+                                "see_friendly_invisible"
+                              ]
+                            }
+                          ]
                         }
                       ]
                     ],
@@ -9094,20 +9109,30 @@
                           "type": "anonymousNbt"
                         },
                         {
-                          "name": "flags",
+                          "name": "prefix",
+                          "type": "anonymousNbt"
+                        },
+                        {
+                          "name": "suffix",
+                          "type": "anonymousNbt"
+                        },
+                        {
+                          "name": "nameTagVisibility",
                           "type": [
-                            "bitflags",
+                            "mapper",
                             {
-                              "type": "u8",
-                              "flags": [
-                                "friendly_fire",
-                                "see_friendly_invisible"
-                              ]
+                              "type": "varint",
+                              "mappings": {
+                                "0": "always",
+                                "1": "never",
+                                "2": "hide_for_other_teams",
+                                "3": "hide_for_own_team"
+                              }
                             }
                           ]
                         },
                         {
-                          "name": "nameTagVisibility",
+                          "name": "deathMessageVisibility",
                           "type": [
                             "mapper",
                             {
@@ -9141,12 +9166,17 @@
                           "type": "varint"
                         },
                         {
-                          "name": "prefix",
-                          "type": "anonymousNbt"
-                        },
-                        {
-                          "name": "suffix",
-                          "type": "anonymousNbt"
+                          "name": "flags",
+                          "type": [
+                            "bitflags",
+                            {
+                              "type": "u8",
+                              "flags": [
+                                "friendly_fire",
+                                "see_friendly_invisible"
+                              ]
+                            }
+                          ]
                         }
                       ]
                     ]
